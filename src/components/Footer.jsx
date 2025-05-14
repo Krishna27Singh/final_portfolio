@@ -9,13 +9,14 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <a href="#home" className="text-2xl font-bold text-gradient inline-block mb-6">
-            John.Dev
+            Krishna Singh
           </a>
           
           <div className="flex justify-center gap-6 mb-6">
             {[
               {
                 name: "GitHub",
+                url: "https://github.com/Krishna27Singh",
                 icon: (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -35,6 +36,7 @@ const Footer = () => {
               },
               {
                 name: "LinkedIn",
+                url: "https://www.linkedin.com/in/krishna-singh-51436733a",
                 icon: (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -55,6 +57,7 @@ const Footer = () => {
               },
               {
                 name: "Twitter",
+                url: "https://x.com/kri_sh_na_27",
                 icon: (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -73,6 +76,7 @@ const Footer = () => {
               },
               {
                 name: "Instagram",
+                url: "https://www.instagram.com/krishnaaasiingh",
                 icon: (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +98,9 @@ const Footer = () => {
             ].map((social, index) => (
               <a 
                 key={index} 
-                href="#" 
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label={social.name}
               >
@@ -118,10 +124,6 @@ const Footer = () => {
             </ul>
           </nav>
           
-          <div className="text-sm text-muted-foreground">
-            <p>© {currentYear} John Doe. All Rights Reserved.</p>
-            <p className="mt-1">Full Stack Developer | MERN Stack | Python | Machine Learning</p>
-          </div>
         </div>
       </div>
     </footer>

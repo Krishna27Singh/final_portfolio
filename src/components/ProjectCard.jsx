@@ -94,13 +94,6 @@ const ProjectCard = ({ project }) => {
               </a>
             )}
           </div>
-          
-          <Button 
-            size="sm" 
-            className="text-xs bg-primary/20 hover:bg-primary/40 text-white transition-colors"
-          >
-            More Details
-          </Button>
         </div>
       </div>
     </div>

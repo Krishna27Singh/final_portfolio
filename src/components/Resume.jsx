@@ -8,22 +8,16 @@ const Resume = () => {
   
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      institution: "University of Technology",
-      duration: "2018 - 2020",
-      description: "Specialized in Artificial Intelligence and Machine Learning. Graduated with honors, completing a thesis on Neural Network Optimization Techniques."
+      degree: "Certificate in MongoDB",
+      institution: "MongoDB University",
+      duration: "2025",
+      description: "Successfully completed the Introduction to MongoDB course, demonstrating proficiency in building and managing NoSQL databases."
     },
     {
-      degree: "Bachelor of Technology in Information Technology",
-      institution: "Institute of Engineering",
-      duration: "2014 - 2018",
-      description: "Focused on software development and web technologies. Completed several projects including an e-learning platform and inventory management system."
-    },
-    {
-      degree: "Certificate in Advanced Web Development",
-      institution: "Online Learning Platform",
-      duration: "2017",
-      description: "Comprehensive course covering modern web development practices, frameworks, and tools."
+      degree: "Certificate in Prompt Engineering",
+      institution: "simplilearn",
+      duration: "2025",
+      description: "Successfully completed the Introduction to Prompt Engineering course, showcasing expertise in designing effective prompts for AI-driven solutions."
     }
   ];
   
@@ -40,9 +34,9 @@ const Resume = () => {
       ]
     },
     {
-      position: "Full Stack Developer",
-      company: "WebSolutions Co.",
-      duration: "2018 - 2021",
+      position: "Core Member - Cybernauts (Technical Society of NITJ)",
+      company: "Cybernauts NITJ",
+      duration: "2025 - Present",
       description: "Developed and maintained multiple web applications for clients across various industries. Worked with React, Node.js, and MongoDB to create responsive and scalable applications.",
       achievements: [
         "Built e-commerce platform with payment integration",
@@ -79,7 +73,7 @@ const Resume = () => {
           >
             Education
           </button>
-          <button
+          {/* <button
             onClick={() => setActiveTab("experience")}
             className={`px-4 py-2 rounded-full transition-all duration-300 ${
               activeTab === "experience"
@@ -88,7 +82,7 @@ const Resume = () => {
             }`}
           >
             Experience
-          </button>
+          </button> */}
         </div>
         
         <div className="max-w-3xl mx-auto">
@@ -138,9 +132,13 @@ const Resume = () => {
           )}
           
           <div className="text-center mt-12">
-            <Button className="bg-primary hover:bg-primary/80 text-white font-medium py-2 px-6 rounded-md transition-all duration-300">
-              Download CV
-            </Button>
+          <Button
+  className="bg-primary hover:bg-primary/80 text-white font-medium py-2 px-6 rounded-md transition-all duration-300"
+  onClick={() => window.open('https://drive.google.com/file/d/1AdjA7J8xv6egxLJMtD8nnOc4-ARyiB-a/view?usp=drive_link', '_blank')}
+>
+  Download CV
+</Button>
+
           </div>
         </div>
       </div>

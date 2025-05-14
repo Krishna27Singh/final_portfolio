@@ -24,21 +24,36 @@ const Contact = () => {
     }));
   };
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success("Your message has been sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+    try {
+      const response = await fetch("https://formspree.io/f/xoveqrla", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
+      
+      if (response.ok) {
+        toast.success("Your message has been sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+      console.error("Form submission error:", error);
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
   
   const contactInfo = [
@@ -60,7 +75,7 @@ const Contact = () => {
         </svg>
       ),
       title: "Call Me",
-      details: "+1 123-456-7890",
+      details: "+91 9785748390",
     },
     {
       icon: (
@@ -81,7 +96,7 @@ const Contact = () => {
         </svg>
       ),
       title: "Email",
-      details: "john.doe@example.com",
+      details: "krishnasingh97857@gmail.com",
     },
     {
       icon: (
@@ -102,7 +117,7 @@ const Contact = () => {
         </svg>
       ),
       title: "Location",
-      details: "San Francisco, CA",
+      details: "Jalandhar, Punjab",
     },
   ];
 
@@ -129,7 +144,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12 mt-16">
           <div className="glass p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} action="https://formspree.io/f/xoveqrla" method="post">
               <div className="space-y-4">
                 <div>
                   <Input
@@ -195,6 +210,7 @@ const Contact = () => {
                 {[
                   {
                     name: "GitHub",
+                    url: "https://github.com/Krishna27Singh",
                     icon: (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -214,6 +230,7 @@ const Contact = () => {
                   },
                   {
                     name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/krishna-singh-51436733a",
                     icon: (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -234,6 +251,7 @@ const Contact = () => {
                   },
                   {
                     name: "Twitter",
+                    url: "https://x.com/kri_sh_na_27",
                     icon: (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -252,6 +270,7 @@ const Contact = () => {
                   },
                   {
                     name: "Instagram",
+                    url: "https://www.instagram.com/krishnaaasiingh",
                     icon: (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +292,9 @@ const Contact = () => {
                 ].map((social, index) => (
                   <a 
                     key={index} 
-                    href="#" 
+                    href={social.url} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full bg-secondary/50 hover:bg-primary/30 transition-colors"
                     aria-label={social.name}
                   >

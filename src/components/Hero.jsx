@@ -6,7 +6,7 @@ const Hero = () => {
   const textRef = useRef(null);
   
   useEffect(() => {
-    const phrases = ["Full Stack Developer", "MERN Stack Expert", "Python Developer", "Machine Learning Enthusiast"];
+    const phrases = ["Full Stack Developer", "MERN Stack Developer", "Python Developer", "Machine Learning Enthusiast"];
     let i = 0;
     let j = 0;
     let currentPhrase = [];
