@@ -6,7 +6,7 @@ const Hero = () => {
   const textRef = useRef(null);
   
   useEffect(() => {
-    const phrases = ["Full Stack Developer", "MERN Stack Developer", "Python Developer", "Machine Learning Enthusiast"];
+    const phrases = ["Full Stack Developer", "MERN Stack Developer", "Python Developer", "Competitive Programmer"];
     let i = 0;
     let j = 0;
     let currentPhrase = [];
@@ -63,14 +63,14 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="text-center md:text-left max-w-3xl mx-auto md:mx-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
-            Hello, I'm <span className="text-gradient">Krishna Singh</span>
+            <span className="text-gradient">Krishna Singh</span>
           </h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 h-10">
             <span className="text-accent" ref={textRef}></span>
             <span className="animate-pulse">|</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            Passionate about building seamless applications, exploring machine learning, 
+            Passionate about building seamless applications, competitive programming, 
             and creating innovative solutions to real word problems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in" style={{ animationDelay: "0.6s" }}>

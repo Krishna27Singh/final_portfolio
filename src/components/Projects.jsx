@@ -8,6 +8,16 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "Air Quality Tracker",
+      description: "BreatheSafe is an AI-powered air quality tracker that provides real-time air pollution data, personalized health risk predictions, and proactive alerts.",
+      tags: ["MERN", "Docker", "Langchain", "OAuth", "JWT"],
+      image: '/aqttt.jpeg',
+      icon: "",
+      category: "full-stack",
+      liveLink: "https://youtu.be/P8EA24t4KIA?si=eU9UPE2Wfpg1Zezl",
+      githubLink: "https://github.com/Krishna27Singh/breathsafe",
+    },
+    {
       title: "Hostel Attendance System",
       description: "A full-stack website to manage hostel attendance securly by authentication, location verification and facial recognition.",
       tags: ["React", "Flask", "MongoDB", "OpenCV", "TailwindCSS"],
@@ -24,7 +34,7 @@ const Projects = () => {
       image: '/mdd.jpeg',
       icon: "",
       category: "full-stack",
-      liveLink: "https://github.com/Krishna27Singh/MoodBloom",
+      liveLink: "https://youtu.be/1M_15uQhpjg?si=dL-UJinWe4VGZE4f",
       githubLink: "https://github.com/Krishna27Singh/MoodBloom",
     },
     {
