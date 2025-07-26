@@ -1,12 +1,9 @@
-/* ✅ MUST come first */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-/* Tailwind layers must follow @import */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Rest of your CSS remains unchanged */
 @layer base {
   :root {
     --background: 240 10% 3.9%;
@@ -37,9 +34,12 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased font-roboto;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Montserrat', sans-serif;
   }
 }
+
+
 @layer utilities {
   .glass {
     @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-xl;

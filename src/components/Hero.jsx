@@ -1,9 +1,12 @@
 
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import SplashCursor from './SplashCursor'
+
 
 const Hero = () => {
   const textRef = useRef(null);
+  <SplashCursor />
   
   useEffect(() => {
     const phrases = ["Full Stack Developer", "MERN Stack Developer", "Python Developer", "Competitive Programmer"];
@@ -58,16 +61,17 @@ const Hero = () => {
   }, []);
 
   return (
+    
     <section id="home" className="min-h-screen flex items-center pt-24 pb-16 relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,120,255,0.1),transparent_50%)]"></div>
       <div className="container mx-auto px-4">
         <div className="text-center md:text-left max-w-3xl mx-auto md:mx-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
-            <span className="text-gradient">Krishna Singh</span>
+            <span className="text-gradient">KRISHNA SINGH</span>
           </h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 h-10">
             <span className="text-accent" ref={textRef}></span>
-            <span className="animate-pulse">|</span>
+            <SplashCursor />
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: "0.3s" }}>
             Passionate about building seamless applications, competitive programming, 
